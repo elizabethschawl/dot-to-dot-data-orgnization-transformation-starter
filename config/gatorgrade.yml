@@ -1,0 +1,127 @@
+setup: |
+  echo "Done installing project dependencies!"
+---
+
+# Reminder for ^^^:
+# All commands executed in the setup block are done in a
+# one-by-one fashion from the current working directory. This means
+# that there is no history associated with running the commands and
+# thus multiple commands must be run in a single chain.
+
+# perform checks on a file
+- README.md:
+    - description: Ensure that the README.md file exists
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers in README.md
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+
+- blogpost.md:
+    - description: Ensure that the blogpost.md file exists
+      check: ConfirmFileExists    
+    - description: Use correct image name (scatter-initial) in blogpost.md
+      check: MatchFileFragment
+      options:
+        fragment: ./assets/images/scatter-initial.
+        count: 1
+        exact: true
+    - description: Use correct image name (line-initial) in blogpost.md
+      check: MatchFileFragment
+      options:
+        fragment: ./assets/images/line-initial.
+        count: 1
+        exact: true
+    - description: Use correct image name (scatter-01) in blogpost.md
+      check: MatchFileFragment
+      options:
+        fragment: ./assets/images/scatter-01.
+        count: 1
+        exact: true
+    - description: Use correct image name (line-01) in blogpost.md
+      check: MatchFileFragment
+      options:
+        fragment: ./assets/images/line-01.
+        count: 1
+        exact: true
+    - description: Use correct image name (scatter-02) in blogpost.md
+      check: MatchFileFragment
+      options:
+        fragment: ./assets/images/scatter-02.
+        count: 1
+        exact: true
+    - description: Use correct image name (line-02) in blogpost.md
+      check: MatchFileFragment
+      options:
+        fragment: ./assets/images/line-02.
+        count: 1
+        exact: true
+    - description: Use correct image name (scatter-03) in blogpost.md
+      check: MatchFileFragment
+      options:
+        fragment: ./assets/images/scatter-03.
+        count: 1
+        exact: true
+    - description: Use correct image name (line-03) in blogpost.md
+      check: MatchFileFragment
+      options:
+        fragment: ./assets/images/line-03.
+        count: 1
+        exact: true
+    - description: Use correct image name (scatter-04) in blogpost.md
+      check: MatchFileFragment
+      options:
+        fragment: ./assets/images/scatter-04.
+        count: 1
+        exact: true
+    - description: Use correct image name (line-04) in blogpost.md
+      check: MatchFileFragment
+      options:
+        fragment: ./assets/images/line-04.
+        count: 1
+        exact: true
+    - description: Use correct image name (scatter-05) in blogpost.md
+      check: MatchFileFragment
+      options:
+        fragment: ./assets/images/scatter-05.
+        count: 1
+        exact: true
+    - description: Use correct image name (line-05) in blogpost.md
+      check: MatchFileFragment
+      options:
+        fragment: ./assets/images/line-05.
+        count: 1
+        exact: true
+    - description: Confirm that the blogpost.md file has at least 5 markdown headings
+      check: CountMarkdownTags
+      options:
+        tag: heading
+        count: 5
+        exact: false
+    - description: Top Level Header has correct words in blogpost.md
+      check: MatchFileFragment
+      options:
+        fragment: Data Organization and Transformation
+        count: 1
+        exact: false
+    - description: H2 reference heading has correct word in blogpost.md
+      check: MatchFileFragment
+      options:
+        fragment: References
+        count: 1
+        exact: false
+    - description: Use correct image name (fine) in blogpost.md
+      check: MatchFileFragment
+      options:
+        fragment: ./assets/images/final.
+        count: 1
+        exact: true
+    
+
+  # count number of commits in the GitHub repository
+- description: Have at least a specific minimum of commits in repository
+  check: CountCommits
+  options:
+    count: 5

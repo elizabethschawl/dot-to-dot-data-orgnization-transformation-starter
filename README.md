@@ -172,7 +172,10 @@ does and looks like, please make sure that you answer the following questions.
 
 ### Copy your data into data-complete.md
 
-- TODO: copy and paste you fully transformed data into data-complete.md
+- TODO: make or verify that a blank file called `data-complete.md` exits
+    - to make a file in VS Code, you can right click, select `New File...`
+    - type in the name `data-complete.md`
+- TODO: copy and paste your final data spread sheet into `data-complete.md`
 
 ## Resources
 

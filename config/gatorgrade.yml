@@ -22,34 +22,22 @@ setup: |
 - blogpost.md:
     - description: Ensure that the blogpost.md file exists
       check: ConfirmFileExists    
-    - description: Use correct image name (scatter-initial) in blogpost.md
-      check: MatchFileFragment
-      options:
-        fragment: ./assets/images/scatter-initial.
-        count: 1
-        exact: true
     - description: Use correct image name (line-initial) in blogpost.md
       check: MatchFileFragment
       options:
         fragment: ./assets/images/line-initial.
         count: 1
         exact: true
-    - description: Use correct image name (scatter-01) in blogpost.md
+    - description: Include basic info on Number of initial observations in blogpost.md
       check: MatchFileFragment
       options:
-        fragment: ./assets/images/scatter-01.
+        fragment: "- Number of initial observations:"
         count: 1
-        exact: true
+        exact: false
     - description: Use correct image name (line-01) in blogpost.md
       check: MatchFileFragment
       options:
         fragment: ./assets/images/line-01.
-        count: 1
-        exact: true
-    - description: Use correct image name (scatter-02) in blogpost.md
-      check: MatchFileFragment
-      options:
-        fragment: ./assets/images/scatter-02.
         count: 1
         exact: true
     - description: Use correct image name (line-02) in blogpost.md
@@ -58,22 +46,10 @@ setup: |
         fragment: ./assets/images/line-02.
         count: 1
         exact: true
-    - description: Use correct image name (scatter-03) in blogpost.md
-      check: MatchFileFragment
-      options:
-        fragment: ./assets/images/scatter-03.
-        count: 1
-        exact: true
     - description: Use correct image name (line-03) in blogpost.md
       check: MatchFileFragment
       options:
         fragment: ./assets/images/line-03.
-        count: 1
-        exact: true
-    - description: Use correct image name (scatter-04) in blogpost.md
-      check: MatchFileFragment
-      options:
-        fragment: ./assets/images/scatter-04.
         count: 1
         exact: true
     - description: Use correct image name (line-04) in blogpost.md
@@ -82,46 +58,62 @@ setup: |
         fragment: ./assets/images/line-04.
         count: 1
         exact: true
-    - description: Use correct image name (scatter-05) in blogpost.md
+    - description: Contains a table with Transformation Name in blogpost.md
       check: MatchFileFragment
       options:
-        fragment: ./assets/images/scatter-05.
+        fragment: Transformation Name
         count: 1
-        exact: true
-    - description: Use correct image name (line-05) in blogpost.md
+        exact: false
+    - description: Contains a table with Formula in blogpost.md
       check: MatchFileFragment
       options:
-        fragment: ./assets/images/line-05.
+        fragment: Formula
         count: 1
-        exact: true
+        exact: false
     - description: Confirm that the blogpost.md file has at least 5 markdown headings
       check: CountMarkdownTags
       options:
         tag: heading
         count: 5
         exact: false
-    - description: Top Level Header has correct words in blogpost.md
+    - description: Top Level Header has correct words in blogpost.md as instructed in README.md
       check: MatchFileFragment
       options:
-        fragment: Data Organization and Transformation
+        fragment: "# Data Organization and Transformation#
         count: 1
         exact: false
-    - description: H2 reference heading has correct word in blogpost.md
+    - description: H2 reference heading is correct for References in blogpost.md
       check: MatchFileFragment
       options:
-        fragment: References
+        fragment: "## References"
         count: 1
         exact: false
-    - description: Use correct image name (fine) in blogpost.md
+    - description: Use correct image name (final) in blogpost.md
       check: MatchFileFragment
       options:
         fragment: ./assets/images/final.
         count: 1
         exact: true
+
+- data-complete.md:
+    - description: Ensure that the data-complete.md file exists
+      check: ConfirmFileExists    
+    - description: find certain data value in data-complete.md
+      check: MatchFileFragment
+      options:
+        fragment: -30
+        count: 3
+        exact: true
+    - description: find certain data value in data-complete.md
+      check: MatchFileFragment
+      options:
+        fragment: 150
+        count: 1
+        exact: true
     
 
   # count number of commits in the GitHub repository
-- description: Have at least a specific minimum of commits in repository
+- description: Have at least 5 of commits in repository
   check: CountCommits
   options:
     count: 5

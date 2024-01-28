@@ -5,15 +5,14 @@ Data Organization and Transformation
 ## Objectives
 
 - Execute basic data organization and transformation
-- Identify variable types
 - Create plots from data table
-- Manage files in GitHub
+- Manage files in GitHub and VS Code
 - Write in Markdown
 
 ## Deliverables
 
 - Blog post in Markdown
-- Five visualizations of provided data
+- six visualizations of provided data
 
 ## Instructions
 
@@ -75,7 +74,7 @@ the deliverable markdown file as a numbered list like this:
 
 <br>
 
-- TODO: copy and fill out the list below with the requested information.
+- TODO: fill out the list below with the requested information and copy it into blogpost.md.
 
 <br>
 
@@ -87,33 +86,33 @@ the deliverable markdown file as a numbered list like this:
 
 <br>
 
-- TODO: make a scatter plot of `rawdata` versus `y`
-- TODO: also make a line plot of `rawdata` alone
-- TODO: download or screenshot these and add the files to assets/images
-- TODO: name the scatter plot `scatter-initial`
-    - the . ending can be any format (.png, .jpg, etc.)
-- TODO: name the line plot `line-initial`
+- TODO: make a line plot of `rawdata` alone
+- TODO: download or screenshot this and add the files to assets/images
+- TODO: name the line plot file `line-initial`
     - the . ending can be any format (.png, .jpg, etc.)
 
 The raw data in the `rawdata` variable needs to undergo three
 transformations in order to be interpretable as `x`. The exercise here is
 to plot, transform, plot, transform etc... so that you can visualize
 what each transformation step does. Only steps that update the `rawdata`
-variable need to be plotted, but be sure to make the scatter plot of the
-updated `rawdata` versus `y` and a line plot of `rawdata` alone.
+variable need to be plotted as a line plot.
 
-- TODO: figure out how many times 2 can be divided out of each
-  `rawdata` observation. Do this for all observations.
-- TODO: make the 2 plots: `scatter-01`, `line-01`
+- TODO: Apply the transformation that counts how many times a given observation
+  in `rawdata` can be split in half.
+    - For example, 8 can be split in half 3 times.
+    - 16 can be split in half 4 times.
+    - More info on this here
+      [[4](https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:logs/x2ec2f6f830c9fb89:log-intro/a/intro-to-logarithms)]
+- TODO: make/name the : `line-01` (all file extensions are fine)
 - TODO: from the result of the previous TODO, scale the observations
   up by 10.
-- TODO: make the 2 plots: `scatter-02`, `line-02`
+- TODO: make/name the plot: `line-02`
 - TODO: from the result of the previous TODO, apply the `sign`
   variable to each observation.
     - Example: the sign of -1 applied to the number 1.4 is -1.4
     - Example: the sign of 1 applied to the number 1.4 is 1.4
     - Hint: think about what happens when you apply unit scaling to any number
-- TODO: make the 2 plots: `scatter-03`, `line-03`
+- TODO: make/name the plot: `line-03`
 
 Congratulations! You have created half of the x variable needed for your final plot.
 To generate the second half of the x variable needed for the final plot continue
@@ -125,7 +124,7 @@ a constant value of 60. (Reflection over the vertical line x=60)
 - TODO: from the result of the previous TODO, shift the observations by twice that
   amount.
 	- Do not change the y values
-- TODO: make the 2 plots: `scatter-04`, `line-04`
+- TODO: make/name the plot: `line-04`
 
 Now all the data exists! The next process is to organize the data by the `pattern`
 and `order-in-pattern` variables.
@@ -133,12 +132,13 @@ and `order-in-pattern` variables.
 - TODO: determine if you need to sort by range or by sheet
 - HINT: consider the possible hack of selecting all the data and then sorting by
   range with advanced options 😉
-- TODO: actually do the sorting
-- TODO: make the 2 plots: `scatter-05`, `line-05`
+- TODO: actually do the sorting, or confirm it is complete
 
 Now the data is fully transformed and organized. A full shape will be revealed
-by plotting all the <x,y> points and the <reflected x,y> points in a
+by plotting as a scatter plot,
+all the <x,y> points and the <reflected x,y> points in a
 Euclidean 2D space. This may or may not be possible in Google Sheets.
+Decimals can be approximated if drawing by hand.
 As you plot, connect the points in the order indicated by the variable
 `order-in-pattern`. Additionally, restart the point connections when the
 `pattern` variable is changed. Use any tool you like, or draw by hand.
@@ -155,26 +155,29 @@ does and looks like, please make sure that you answer the following questions.
 
 - TODO: what is the difference between scaling and shifting?
 - TODO: what is a logarithm?
-- TODO: what does `range` refer to in Google Sheets for sorting?
-- TODO: do the plots you made always _appear to be_ different? Why or why not?
-- TODO: what was most difficult about the process?
-- TODO: what was the most and least useful part of the process?
+- TODO: what was most difficult about the process of transformation?
 
 ### Summary of Formulas
 
-- TODO: complete summary table of the formulas you typed into sheets
+- TODO: complete this summary table of the formulas you typed into sheets and
+  add it to blogpost.md
 
-| Transformation | Formula | Visual Impact |
-|----------------|---------|---------------|
+| Transformation Name | Formula | Visual Impact |
+|---------------------|---------|---------------|
 |
 |
 |
 |
 |
+
+### Copy your data into data-complete.md
+
+- TODO: copy and paste you fully transformed data into data-complete.md
 
 ## Resources
 
 1. https://commonmark.org/help/
 2. https://www.markdownguide.org/extended-syntax/#tables
 3. https://tableconvert.com/markdown-to-excel
-4. https://www.geogebra.org/classic
+4. https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:logs/x2ec2f6f830c9fb89:log-intro/a/intro-to-logarithms
+5. https://www.geogebra.org/classic

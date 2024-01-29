@@ -134,8 +134,8 @@ and `order-in-pattern` variables.
   range with advanced options 😉
 - TODO: actually do the sorting, or confirm it is complete
 
-Now the data is fully transformed and organized. A full shape will be revealed
-by plotting as a scatter plot,
+Now the data is fully transformed and organized. OPTIONALLY, a full shape will
+be revealed by plotting as a scatter plot,
 all the <x,y> points and the <reflected x,y> points in a
 Euclidean 2D space. This may or may not be possible in Google Sheets.
 Decimals can be approximated if drawing by hand.
@@ -164,7 +164,6 @@ does and looks like, please make sure that you answer the following questions.
 
 | Transformation Name | Formula | Visual Impact |
 |---------------------|---------|---------------|
-|
 |
 |
 |

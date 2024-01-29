@@ -88,12 +88,12 @@ setup: |
         fragment: "## References"
         count: 1
         exact: false
-    - description: Use correct image name (final) in blogpost.md
+    - description: OPTIONAL - use correct image name (final) in blogpost.md
       check: MatchFileFragment
       options:
         fragment: ./assets/images/final.
-        count: 1
-        exact: true
+        count: 0
+        exact: false
 
 - data-complete.md:
     - description: Ensure that the data-complete.md file exists

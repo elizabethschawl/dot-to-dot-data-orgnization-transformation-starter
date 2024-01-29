@@ -12,7 +12,8 @@ Data Organization and Transformation
 ## Deliverables
 
 - Blog post in Markdown
-- six visualizations of provided data
+- five visualizations of provided data
+- OPTIONAL sixth visualization
 
 ## Instructions
 

@@ -145,9 +145,9 @@ As you plot, connect the points in the order indicated by the variable
 `pattern` variable is changed. Use any tool you like, or draw by hand.
 
 - [recommended tool](https://www.geogebra.org/classic)
-- TODO: download or screenshot the final image you generate to be added to the blog post.  
-- TODO: if you draw by hand, you must upload a good photo of the drawing.
-- TODO: name it `final`
+- Optional TODO: download or screenshot the final image you generate to be added to the blog post.  
+- Optional TODO: if you draw by hand, you must upload a good photo of the drawing.
+- Optional TODO: name it `final`
 
 ### Questions
 

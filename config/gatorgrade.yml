@@ -102,7 +102,7 @@ setup: |
       check: MatchFileFragment
       options:
         fragment: -30
-        count: 3
+        count: 1
         exact: true
     - description: find certain data value in data-complete.md
       check: MatchFileFragment

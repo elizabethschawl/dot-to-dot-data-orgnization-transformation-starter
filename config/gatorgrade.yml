@@ -79,7 +79,7 @@ setup: |
     - description: Top Level Header has correct words in blogpost.md as instructed in README.md
       check: MatchFileFragment
       options:
-        fragment: "# Data Organization and Transformation#
+        fragment: "# Data Organization and Transformation"
         count: 1
         exact: false
     - description: H2 reference heading is correct for References in blogpost.md
